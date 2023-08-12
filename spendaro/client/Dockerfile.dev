@@ -6,6 +6,7 @@ WORKDIR /usr/client
 
 COPY package*.json ./
 
+# Install Dependencies - Only if package.json changes (cache improvements to avoid re-installing dependencies every time)
 RUN npm install
 
 COPY ./ ./

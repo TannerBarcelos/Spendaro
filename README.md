@@ -1,11 +1,10 @@
 # Spendaro
 
-Spendaro is a full-featured finance management app. It allows users to create and manage a zero-based budget, organize transactions by category, and generate spending and income reports _with many more things to come_!
+Empowering Your Financial Future: Navigate, Save, Thrive with Spendaro
 
-### Features
-- [ ] Create and manage a zero-based budget
-- [ ] Organize transactions by category
-- [ ] Spending and income reports
+![Spendaro](./spendaro.png)
+
+> This design is a work in progress. It is not yet functional nor finished.
 
 ### Installation
 > This project leverages containers to run the application. You will need to have [Docker](https://www.docker.com/) installed on your machine to proceed.
@@ -16,3 +15,9 @@ Spendaro is a full-featured finance management app. It allows users to create an
 ```bash
 docker-compose up -d
 ```
+
+### About The Project
+Spendaro is a full-featured finance management app. It allows users to create and manage a zero-based budget, organize transactions by category, and generate spending and income reports _with many more things to come_!
+
+### Features
+Under development

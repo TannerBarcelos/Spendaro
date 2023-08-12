@@ -1,26 +1,27 @@
-# Variables for Makefile
-
-# Dockerfile name
 DOCKERFILE_NAME = Dockerfile.dev
+DOCKERFILE_CLIENT_PATH_WITH_NAME = ./spendaro/client/${DOCKERFILE_NAME}
+DOCKERFILE_API_PATH_WITH_NAME = ./spendaro/api/${DOCKERFILE_NAME}
 
-# Docker image and container names
+DOCKER_CLIENT_BUILD_CONTEXT = ./spendaro/client/
+DOCKER_API_BUILD_CONTEXT = ./spendaro/api/
+
 API_IMAGE_NAME = spendaro-rest-image
 API_CONTAINER_NAME = spendaro-rest
 API_HOST_PORT = 8000
+
 CLIENT_IMAGE_NAME = spendaro-client-image
 CLIENT_CONTAINER_NAME = spendaro-client
 CLIENT_HOST_PORT = 3000
 
-# Source code locations
-CLIENT_LOCATION = spendaro/client
-API_LOCATION = spendaro/api
+CLIENT_LOCATION = ./spendaro/client/
+API_LOCATION = ./spendaro/api/
 
 build-client-image:
-	cd ${CLIENT_LOCATION} && docker build -t ${CLIENT_IMAGE_NAME} -f ${DOCKERFILE_NAME} .
+	docker build -t ${CLIENT_IMAGE_NAME} -f ${DOCKERFILE_CLIENT_PATH_WITH_NAME} ${DOCKER_CLIENT_BUILD_CONTEXT}
 run-client-container:
 	docker run --name ${CLIENT_CONTAINER_NAME} -dp ${CLIENT_HOST_PORT}:3000 ${CLIENT_IMAGE_NAME}
 build-api-image:
-	cd ${API_LOCATION} && docker build -t ${API_IMAGE_NAME} -f ${DOCKERFILE_NAME} .
+	docker build -t ${API_IMAGE_NAME} -f ${DOCKERFILE_API_PATH_WITH_NAME} ${DOCKER_API_BUILD_CONTEXT}
 run-api-container:
 	docker run --name ${API_CONTAINER_NAME} -dp ${API_HOST_PORT}:8000 ${API_IMAGE_NAME}
 compose:

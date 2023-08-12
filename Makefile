@@ -1,27 +1,33 @@
-# Non containerized commands
-api-install-deps:
-	cd api && pip install -r requirements.txt
+# Variables for Makefile
 
-api-run:
-	cd api && uvicorn server:app --reload
+# Dockerfile name
+DOCKERFILE_NAME = Dockerfile.dev
 
-client-install-deps:
-	cd client && npm install
+# Docker image and container names
+API_IMAGE_NAME = spendaro-rest-image
+API_CONTAINER_NAME = spendaro-rest
+API_HOST_PORT = 8000
+CLIENT_IMAGE_NAME = spendaro-client-image
+CLIENT_CONTAINER_NAME = spendaro-client
+CLIENT_HOST_PORT = 3000
 
-client-run:
-	cd client && npm run dev
+# Source code locations
+CLIENT_LOCATION = spendaro/client
+API_LOCATION = spendaro/api
 
-
-# Docker
 build-client-image:
-	cd client && docker build -t spandaro-client-image -f Dockerfile.dev .
+	cd ${CLIENT_LOCATION} && docker build -t ${CLIENT_IMAGE_NAME} -f ${DOCKERFILE_NAME} .
 run-client-container:
-	docker run --name spendaro-client -dp 3000:3000 spandaro-client-image
-
+	docker run --name ${CLIENT_CONTAINER_NAME} -dp ${CLIENT_HOST_PORT}:3000 ${CLIENT_IMAGE_NAME}
 build-api-image:
-	cd api && docker build -t spendaro-api-image -f Dockerfile.dev .
+	cd ${API_LOCATION} && docker build -t ${API_IMAGE_NAME} -f ${DOCKERFILE_NAME} .
 run-api-container:
-	docker run --name spendaro-api -dp 8000:8000 spendaro-api-image
-
+	docker run --name ${API_CONTAINER_NAME} -dp ${API_HOST_PORT}:8000 ${API_IMAGE_NAME}
 compose:
 	docker-compose up -d --build
+compose-down:
+	docker-compose down
+docker-logs-api:
+	docker logs ${API_CONTAINER_NAME}-service-1
+docker-logs-client:
+	docker logs ${CLIENT_CONTAINER_NAME}-service-1

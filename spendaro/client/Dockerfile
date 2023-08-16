@@ -13,7 +13,7 @@ COPY ./ ./
 # Dev Stage - Used for development
 FROM base AS dev
 EXPOSE ${EXPOSE_PORT}
-CMD ["npm", "run", "dev:docker"]
+CMD ["npm", "run", "dev"]
 
 # Base Prod Stage - Used for production pre-build for optimization
 FROM base AS prod-base

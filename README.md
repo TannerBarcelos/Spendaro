@@ -17,7 +17,12 @@ Empowering Your Financial Future: Navigate, Save, Thrive with Spendaro
 Make compose-up
 ```
 
-
+> Please note that using `docker compose` is the desired way to conveniently, quickly and properly build and run Spendaro. 
+> 
+> If you wish to run the backend and frontend as standalone images OR not use Docker at all *highly discouraged as this application is Built, Tested and Deployed to the cloud in Kubernetes*
+> then you must simply edit your `.env.local` file, uncommenting the `VITE_PROXY_LOCAL_URL`
+> and then comment out the previously uncommented variable `VITE_PROXY_DOCKER_URL`.
+> This change will ensure the React UI can properly proxy API calls between its server and the FastAPI REST web server.
 
 
 ### About The Project

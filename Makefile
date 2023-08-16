@@ -1,7 +1,8 @@
-# image:
-# 	$(MAKE) -C spendaro image-dev
-# container:
-# 	$(MAKE) -C spendaro container-dev
+image:
+ 	$(MAKE) -C spendaro image-dev
+
+container:
+ 	$(MAKE) -C spendaro container-dev
 
 imageprod:
 	$(MAKE) -C spendaro image-prod

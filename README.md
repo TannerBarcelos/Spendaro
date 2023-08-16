@@ -12,9 +12,13 @@ Empowering Your Financial Future: Navigate, Save, Thrive with Spendaro
 > Also be sure to set env variables for both the client and api (see `.env.local` files in each directory for required variables)
 
 **To configure and run Spendaro, enter the following command**
+> The client will be available at `http://localhost:5173`
 ```bash
-docker-compose up -d
+Make compose-up
 ```
+
+
+
 
 ### About The Project
 Spendaro is a full-featured finance management app. It allows users to create and manage a zero-based budget, organize transactions by category, and generate spending and income reports _with many more things to come_!

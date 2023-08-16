@@ -1,9 +1,9 @@
-version: '3.3'
+version: '3.8'
 services:
   rest-service:
-    build: 
+    build:
       context: ./spendaro/api
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     env_file:
@@ -11,8 +11,9 @@ services:
   client-service:
     build: 
       context: ./spendaro/client
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
+      target: dev
     ports:
-      - "3000:3000"
+      - "5173:5173"
     env_file:
-      - ./spendaro/api/.env.local
+      - ./spendaro/client/.env.local

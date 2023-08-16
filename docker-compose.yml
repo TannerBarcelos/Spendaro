@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    env_file:
-      - ./spendaro/api/.env.local
   client-service:
     build: 
       context: ./spendaro/client
@@ -15,5 +13,3 @@ services:
       target: dev
     ports:
       - "5173:5173"
-    env_file:
-      - ./spendaro/client/.env.local

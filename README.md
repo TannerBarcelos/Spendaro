@@ -11,8 +11,7 @@ Empowering Your Financial Future: Navigate, Save, Thrive with Spendaro
 Spendaro is a full-featured finance management app. It allows users to create and manage a zero-based budget, organize transactions by category, and generate spending and income reports _with many more things to come_!
 
 ### Setup
-
-You will need to have [Docker](https://www.docker.com/) installed on your machine to proceed with the Docker route.
+> The quickest way to get started is to use Docker Compose. This will build the images and create the containers for you. You will need to have [Docker](https://www.docker.com/) installed on your machine to proceed with this route.
 
 **Run using Docker Compose**
 ```bash

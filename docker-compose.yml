@@ -4,8 +4,9 @@ services:
     build:
       context: ./spendaro/api
       dockerfile: Dockerfile
+      target: dev
     volumes:
-      - ./spendaro/api:/usr/app
+      - ./spendaro/api:/usr/api
     ports:
       - "8000:8000"
   client-service:

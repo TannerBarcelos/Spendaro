@@ -24,4 +24,3 @@ WORKDIR /usr/app
 RUN ls -la
 COPY --from=prod-base ./client/dist ./
 CMD ["node", "dist/src/app.js"]
-

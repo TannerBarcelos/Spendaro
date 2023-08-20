@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 COPY ./ ./
 
 FROM base AS dev
-RUN pip install --no-cache-dir --upgrade -r requirements-dev.txt
+WORKDIR /usr/api
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
 
 FROM base AS prod

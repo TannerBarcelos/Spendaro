@@ -1,9 +1,9 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_PROXY_LOCAL_URL: string
-  readonly VITE_PROXY_DOCKER_URL: string
-  readonly VITE_PORT: number
+  readonly VITE_PROXY_URL: string
+  readonly VITE_PROXY_PORT: number
+  // more env variables...
 }
 
 interface ImportMeta {

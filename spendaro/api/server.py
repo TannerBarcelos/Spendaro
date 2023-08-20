@@ -5,4 +5,5 @@ app = server.get_server()
 
 @app.get("/api")
 def read_root(name: str = 'world'):
-    return {"greeting": f"Hello {name.capitalize()}"}
+    name = name.capitalize()
+    return {"greeting": f"Hello {name}"}

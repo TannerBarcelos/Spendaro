@@ -12,4 +12,4 @@ CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
 
 FROM base AS prod
 WORKDIR /usr/api
-CMD ["python", "server.py"]
+CMD ["uvicorn", "server:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "8000"]

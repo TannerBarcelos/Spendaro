@@ -2,6 +2,10 @@ ARG NODE_VERSION_TAG=20.5.1-slim
 ARG EXPOSE_PORT=5173
 ARG NODE_ENV
 
+###############
+# Development #
+###############
+
 # Base Stage - Used for both dev and prod
 FROM node:${NODE_VERSION_TAG} AS base
 WORKDIR /usr/app
@@ -11,16 +15,27 @@ COPY ./ ./
 
 # Dev Stage - Used for development
 FROM base AS dev
+WORKDIR /usr/app
 EXPOSE ${EXPOSE_PORT}
 CMD ["npm", "run", "dev"]
 
-# Base Prod Stage - Used for production pre-build for optimization
-FROM base AS prod-base
+
+
+##############
+# Production #
+##############
+
+# Base Prod Stage
+FROM node:${NODE_VERSION_TAG} AS prod-base
+WORKDIR /usr/app
+COPY package*.json ./
+RUN npm install
+COPY ./ ./
 RUN npm run build
 
-# Prod Stage - Used for production
-FROM node:${NODE_VERSION_TAG} AS prod
+# Prod Stage (since the built application are static files, we can use nginx to serve them given Vite is not a production server and we need to serve the files!)
+FROM nginx:1.19.10-alpine AS prod
 WORKDIR /usr/app
-RUN ls -la
-COPY --from=prod-base ./client/dist ./
-CMD ["node", "dist/src/app.js"]
+COPY --from=prod-base /usr/app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

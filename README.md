@@ -1,5 +1,7 @@
 # Spendaro
 
+![Site Deployment](https://github.com/TannerBarcelos/Spendaro/actions/workflows/deploy-site.yaml/badge.svg)
+
 Helping make finance easier for couples one budget at a time.
 
 ![Spendaro](./spendaro.png)
@@ -16,27 +18,9 @@ Spendaro is a budgeting app that is designed to help couples manage their financ
 * AWS
 * Github Actions for CI/CD
 
-## Setup
-The quickest way to get started is to use Docker Compose. This will build the images and create the containers for you. You will need to have [Docker](https://www.docker.com/) installed on your machine to proceed with this method.
-
-## Running the app
-
-#### Docker Compose
-```bash
-Make compose-up
-```
-
-#### Local
-* This will run the react app and the rest api as standalone services. 
-* You will need to have [Node](https://nodejs.org/en/) installed on your machine to proceed with the local route as well as Python3
-```bash
-Make install-local-deps # Install dependencies for the client and server
-Make runclient
-Make runserver
-```
-
-> The client will be available at `http://localhost:5173`
-
 ## Features
 
 Under development
+
+## Getting Started
+Please refer to the [contributing guide](./CONTRIBUTING.md) for information on how to get started with the project and how to contribute.

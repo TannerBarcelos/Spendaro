@@ -1,4 +1,4 @@
-name: Deploy Spendaro site to GitHub Pages
+name: Static Site Deployment
 
 on:
   # Trigger the workflow every time you push to the `main` branch

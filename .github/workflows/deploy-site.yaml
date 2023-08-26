@@ -15,6 +15,7 @@ permissions:
   id-token: write
 
 jobs:
+  # Build code
   build:
     runs-on: ubuntu-latest
     steps:
@@ -23,8 +24,9 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-          path: ./spendaro/site # The root location of your Astro project inside the repository. (optional)
+          path: spendaro/site # The root location of your Astro project inside the repository. (optional)
 
+  # Deploy to GitHub Pages
   deploy:
     needs: build
     runs-on: ubuntu-latest

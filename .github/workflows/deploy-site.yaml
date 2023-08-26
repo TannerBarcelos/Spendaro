@@ -21,6 +21,7 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+        # Look at the contents of the repository (using this as a learning exercise)
       - name: List Directory Contents
         run: |
           ls -la

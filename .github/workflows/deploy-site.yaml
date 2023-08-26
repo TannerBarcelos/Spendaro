@@ -24,7 +24,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-          path: ./spendaro/site
+          path: ./spendaro/site/
 
   # Deploy to GitHub Pages
   deploy:

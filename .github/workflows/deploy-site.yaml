@@ -28,6 +28,7 @@ jobs:
         uses: withastro/action@v0
         with:
           path: ./spendaro/site
+          package-manager: npm
 
   # Deploy to GitHub Pages
   deploy:

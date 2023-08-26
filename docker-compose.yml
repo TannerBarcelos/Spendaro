@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  rest-service:
+  api:
     build:
       context: ./spendaro/api
       dockerfile: Dockerfile
@@ -9,7 +9,11 @@ services:
       - ./spendaro/api:/usr/api
     ports:
       - "8000:8000"
-  client-service:
+    # Backend service depends on postgres and redis to spin up
+    depends_on:
+      - postgres
+      - redis
+  client:
     build:
       context: ./spendaro/client
       dockerfile: Dockerfile
@@ -18,7 +22,23 @@ services:
       - ./spendaro/client:/usr/app
       - /usr/app/node_modules
     environment:
-      - VITE_PROXY_URL=http://rest-service:8000
+      - VITE_PROXY_URL=http://api:8000
       - VITE_APP_PORT=5173
     ports:
       - "5173:5173"
+  postgres:
+    image: postgres:15.4-alpine
+    env_file:
+      - .env
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:7.2-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  pg_data:
+

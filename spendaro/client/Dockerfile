@@ -19,8 +19,6 @@ WORKDIR /usr/app
 EXPOSE ${EXPOSE_PORT}
 CMD ["npm", "run", "dev"]
 
-
-
 ##############
 # Production #
 ##############

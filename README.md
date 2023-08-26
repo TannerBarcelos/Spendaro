@@ -18,10 +18,6 @@ The quickest way to get started is to use Docker Compose. This will build the im
 Make compose-up
 ```
 
-> **IMPORTANT**
-> If you wish to run the backend and frontend as standalone images or not use Docker at all in development, you will need to change a configuration setting in the `./spendaro/client` directory. The setting is `withService` and it should be set to false if you plan to run locally.
-
-
 #### Local
 * This will run the react app and the rest api as standalone services. 
 * You will need to have [Node](https://nodejs.org/en/) installed on your machine to proceed with the local route as well as Python3

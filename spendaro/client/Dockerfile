@@ -5,24 +5,17 @@ ARG NODE_ENV
 ###############
 # Development #
 ###############
-
-# Base Stage - Used for both dev and prod
-FROM node:${NODE_VERSION_TAG} AS base
+FROM node:${NODE_VERSION_TAG}
 WORKDIR /usr/app
 COPY package*.json ./
 RUN npm install
 COPY ./ ./
-
-# Dev Stage - Used for development
-FROM base AS dev
-WORKDIR /usr/app
 EXPOSE ${EXPOSE_PORT}
 CMD ["npm", "run", "dev"]
 
 ##############
 # Production #
 ##############
-
 # Base Prod Stage
 FROM node:${NODE_VERSION_TAG} AS prod-base
 WORKDIR /usr/app

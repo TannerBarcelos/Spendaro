@@ -22,8 +22,8 @@ services:
       - ./spendaro/client:/usr/app
       - /usr/app/node_modules
     environment:
-      - VITE_PROXY_URL=${VITE_PROXY_URL}
-      - VITE_APP_PORT=${VITE_APP_PORT}
+      - VITE_PROXY_URL=http://api:8000
+      - VITE_APP_PORT=5173
     ports:
       - "5173:5173"
   postgres:

@@ -13,10 +13,19 @@ Spendaro is a budgeting app that is designed to help couples manage their financ
 ## Built With
 * React _and other frontend tools and libraries_
 * FastAPI
+* PostgreSQL
+* SQLAlchemy
+* Redis
 * Docker
 * Kubernetes
 * AWS
 * Github Actions for CI/CD
+* Cypress for E2E testing
+* Jest for unit testing and integration testing (frontend)
+* Pytest for unit testing and integration testing (backend)
+* Figma for design
+* Trello for project management
+* Much more!
 
 ## Features
 

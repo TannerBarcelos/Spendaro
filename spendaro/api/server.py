@@ -1,11 +1,7 @@
-from utils.create_server import FastApiServerCreator
-from db.connect_db import PGDatabaseConnector as DatabaseConnector
+from utils.create_server import FastApiServerCreator as Server
 
-server = FastApiServerCreator()
-app = server.get_server()
-
-db = DatabaseConnector()
-db.connect()
+server = Server()
+app = server.init()
 
 @app.get("/api")
 def read_root(name: str = 'world'):

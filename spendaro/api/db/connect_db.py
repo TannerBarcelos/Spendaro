@@ -24,7 +24,6 @@ class PGDatabaseConnector():
             db.close()
 
     def connect(self):
-        print('Connecting to database...')
         try:
             self.engine.connect()
             print('Connected to database.')

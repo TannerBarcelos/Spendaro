@@ -9,22 +9,17 @@ runserver:
 
 # Compose commands
 compose-up:
-	docker-compose \
-		-f ./docker/docker-compose.dev.yaml \
-		-p spendaro \
-		up -d 
+	docker-compose -f ./docker/docker-compose.dev.yaml -p spendaro up -d 
 compose-up-prod:
-	docker-compose \
-	-f ./docker/docker-compose.prod.yaml \
-	-p spendaro-prod \
-	up -d 
+	docker-compose -f ./docker/docker-compose.prod.yaml -p spendaro-prod up -d 
 compose-up-tests:
-	docker-compose \
-	-f ./docker/docker-compose.tests.yaml \
-	-p spendaro-tests \
-	up -d
+	docker-compose -f ./docker/docker-compose.tests.yaml -p spendaro-tests up -d
 compose-down:
-	docker-compose down
+	docker-compose -f ./docker/docker-compose.dev.yaml down
+compose-down-prod:
+	docker-compose -f ./docker/docker-compose.prod.yaml down
+compose-down-tests:
+	docker-compose -f ./docker/docker-compose.tests.yaml down
 
 # Docker commands (non-compose)
 image:

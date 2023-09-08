@@ -7,6 +7,16 @@ services:
       target: dev
     volumes:
       - ./spendaro/api:/usr/api
+    environment:
+      # Postgres connection env variables
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB_NAME=${POSTGRES_DB}
+      - POSTGRES_SERVER=postgres #service name in compose and K8s - defaults localhost in app code
+      - POSTGRES_PORT=5432
+      # Redis env variables
+      # Secret keys env variables
+      # others...
     ports:
       - "8000:8000"
     # Backend service depends on postgres and redis to spin up
@@ -22,7 +32,7 @@ services:
       - ./spendaro/client:/usr/app
       - /usr/app/node_modules
     environment:
-      - VITE_PROXY_URL=http://api:8000
+      - VITE_PROXY_URL=${VITE_PROXY_URL}
     ports:
       - "5173:5173"
   postgres:

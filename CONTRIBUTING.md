@@ -3,7 +3,7 @@ The quickest way to get started is to use Docker Compose. This will build the im
 
 ### Running the app
 
-1. Create a `.env` file in the root of the project and add the following variables:
+1. Create a `.env` file in the `docker` directory and add the following variables:
 ```bash
 POSTGRES_USER=
 POSTGRES_PASSWORD=

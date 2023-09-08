@@ -25,12 +25,6 @@ container-prod:
 	docker run --name ${CLIENT_CONTAINER_NAME} -dp ${CLIENT_HOST_PORT}:80 ${CLIENT_IMAGE_NAME}
 	docker run --name ${API_CONTAINER_NAME} -dp ${API_HOST_PORT}:8000 ${API_IMAGE_NAME}
 
-compose-up:
-	docker-compose up -d
-
-compose-down:
-	docker-compose down
-
 docker-logs-api:
 	docker logs ${API_CONTAINER_NAME}-service-1
 

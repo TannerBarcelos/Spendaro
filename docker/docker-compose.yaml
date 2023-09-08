@@ -2,11 +2,11 @@ version: '3.8'
 services:
   api:
     build:
-      context: ./spendaro/api
+      context: ../spendaro/api
       dockerfile: Dockerfile
       target: dev
     volumes:
-      - ./spendaro/api:/usr/api
+      - ../spendaro/api:/usr/api
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -18,13 +18,13 @@ services:
       - redis
   client:
     build:
-      context: ./spendaro/client
+      context: ../spendaro/client
       dockerfile: Dockerfile
       target: dev
     volumes:
-      - ./spendaro/client:/usr/app
+      - ../spendaro/client:/usr/app
       - /usr/app/node_modules
-    env:
+    environment:
       - VITE_PROXY_URL=http://api:8000
     ports:
       - "5173:5173"

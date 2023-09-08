@@ -5,7 +5,7 @@ ARG NODE_ENV
 ###############
 # Development #
 ###############
-FROM node:${NODE_VERSION_TAG}
+FROM node:${NODE_VERSION_TAG} AS dev
 WORKDIR /usr/app
 COPY package*.json ./
 RUN npm install

@@ -1,8 +1,8 @@
 # Spendaro
 
-![Site Deployment](https://github.com/TannerBarcelos/Spendaro/actions/workflows/deploy-site.yaml/badge.svg)
+![Marketing Site Deployment](https://github.com/TannerBarcelos/Spendaro/actions/workflows/deploy-site.yaml/badge.svg)
 
-Helping make finance easier for couples one budget at a time.
+Helping make finance easier for couples.
 
 ![Spendaro](./spendaro.png)
 

@@ -16,6 +16,9 @@ class PGDatabaseConnector():
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)                                                     # Create a db session
     Base = declarative_base()                                                                                                       # Create a base class for models
 
+    def __init__(self):
+        self.connect()
+
     # Yields a db session to the caller and closes the session when the caller is done (used to bind the session to the request lifecycle)
     def get_db(self):
         db = self.SessionLocal()

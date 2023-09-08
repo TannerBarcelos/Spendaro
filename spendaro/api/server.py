@@ -1,10 +1,10 @@
-from utils.create_server import FastApiServerCreator as Server
-from sqlalchemy.orm import Session
-from fastapi import Depends
-from db.connect_db import PGDatabaseConnector as DBConnector
+from utils.create_server import FastApiServerCreator
+from db.connect_db import PGDatabaseConnector
 
-app = Server().get_app()
-database = DBConnector().get_db()
+server = FastApiServerCreator()
+app = server.get_app()
+
+db = PGDatabaseConnector()
 
 @app.get("/api")
 def read_root(name: str = 'world'):

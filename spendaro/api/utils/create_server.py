@@ -1,13 +1,8 @@
 from fastapi import FastAPI
-from db.connect_db import PGDatabaseConnector
 
 class FastApiServerCreator:
     def __init__(self):
-        self.__app__ = FastAPI()                # Initialize FastAPI server
-        self.__db__ = PGDatabaseConnector()     # Initialize database connector
+        self.__app__ = FastAPI()
 
-    def init(self):
-        print("Creating server...")
-        print("Creating database connection...")
-        self.__db__.connect()
+    def get_app(self):
         return self.__app__

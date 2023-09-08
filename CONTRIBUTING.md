@@ -8,6 +8,7 @@ The quickest way to get started is to use Docker Compose. This will build the im
 POSTGRES_USER=
 POSTGRES_PASSWORD=
 POSTGRES_DB=
+POSTGRES_HOST=
 ```
 
 These variables are used to spin up the Postgres Database. You can use any values you want for these variables but ensure they are secure.

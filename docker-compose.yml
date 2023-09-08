@@ -7,8 +7,10 @@ services:
       target: dev
     volumes:
       - ./spendaro/api:/usr/api
-    env_file:
-      - ./spendaro/api/.env
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - "8000:8000"
     depends_on:
@@ -22,8 +24,8 @@ services:
     volumes:
       - ./spendaro/client:/usr/app
       - /usr/app/node_modules
-    env_file:
-      - ./spendaro/client/.env
+    env:
+      - VITE_PROXY_URL=http://api:8000
     ports:
       - "5173:5173"
   postgres:

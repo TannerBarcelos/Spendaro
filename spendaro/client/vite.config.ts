@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig(({ mode }) => {
   // Loaded in if overidden in local .env OR if using Docker
   const env = loadEnv(mode, process.cwd(), '')
+  console.log(env.VITE_PROXY_URL)
   return {
     define: {
       __APP_ENV__: JSON.stringify(env.APP_ENV),

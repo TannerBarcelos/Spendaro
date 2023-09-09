@@ -13,3 +13,6 @@ class RootRouter:
         '''
         # GET /api/root/dummy
         self.router.add_api_route('/', self.controllers.dummy, methods=[HTTPMethods.GET.value])
+        
+        # GET /api/root/dummy/{name}
+        self.router.add_api_route('/{name}', self.controllers.dummyname, methods=[HTTPMethods.GET.value])

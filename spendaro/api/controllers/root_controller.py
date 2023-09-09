@@ -14,3 +14,8 @@ class RootControllers:
     def dummy(self, name: str = 'world'):
         result = self.mock_service.sample_service_method()
         return {"greeting": f"Hello {name}. The result of 1+1 is {result}"}
+    
+    # GET /api/root/dummy/{name}
+    def dummyname(self, name: str):
+        result = self.mock_service.sample_service_method()
+        return {"greeting": f"Hello {name}. The result of 1+1 is {result}"}

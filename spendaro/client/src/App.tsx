@@ -5,9 +5,10 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [name] = useState('Spendaro')
 
   useEffect(() => {
-    fetch('/api/root/')
+    fetch(`/api/root/${ name }`)
       .then((res) => res.json())
       .then((data) => console.log(data))
   }, [])

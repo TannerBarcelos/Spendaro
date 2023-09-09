@@ -10,22 +10,41 @@ Helping make finance easier for couples.
 
 Spendaro is a budgeting app that is designed to help couples manage their finances together. As a newlywed, I know just how hard it is to manage finances with your significant other. This app is designed to help make that process easier. Finance and budgeting are a passion of mine and I hope to help others with this app.
 
-## Built With
-* React _and other frontend tools and libraries_
-* FastAPI
-* PostgreSQL
-* SQLAlchemy
-* Redis
-* Docker
-* Kubernetes
-* AWS
-* Github Actions for CI/CD
-* Cypress for E2E testing
-* Jest for unit testing and integration testing (frontend)
-* Pytest for unit testing and integration testing (backend)
-* Figma for design
-* Trello for project management
-* Much more!
+### Built With
+
+* **Frontend**
+    * Typescript
+    * React
+    * TanStack Query
+    * React Router
+    * React Hook Form
+    * Shadcn
+    * Redux Toolkit
+    * Vitest
+    * Cypress for E2E testing
+    * Much more!
+
+* **Backend**
+    * Python
+    * FastAPI
+    * SQLAlchemy
+    * Pytest
+
+* **Database**
+    * PostgreSQL
+    * Redis
+ 
+* **Infrastructure**
+    * Docker
+    * Kubernetes
+    * AWS
+    * Github Actions
+
+* **Project Management**
+    * Figma for design
+    * Trello for project management
+    * Much more!
+
 
 ## Features
 

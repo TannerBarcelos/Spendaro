@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    fetch('/api')
+    fetch('/api/root/')
       .then((res) => res.json())
       .then((data) => console.log(data))
   }, [])

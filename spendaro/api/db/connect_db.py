@@ -1,19 +1,12 @@
-import os
 from typing import Any, Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Connection
-
-# Convert to config file later
-POSTGRES_USER = os.environ.get('POSTGRES_USER')
-POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD')
-POSTGRES_HOST = os.environ.get('POSTGRES_HOST', 'localhost')
-POSTGRES_DB = os.environ.get('POSTGRES_DB')
-POSTGRES_DRIVER = 'postgresql+psycopg2'
+from config import POSTGRES_DB, POSTGRES_HOST, POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DRIVER
 
 class PGDatabaseConnector():
-    SQLALCHEMY_DATABASE_URL = f"{POSTGRES_DRIVER}://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DB}"       # Postgres connection string
+    SQLALCHEMY_DATABASE_URL = f"{POSTGRES_DRIVER}://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DB}"         # Postgres connection string
     engine = create_engine(SQLALCHEMY_DATABASE_URL)                                                                                 # Create a new DB Engine
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)                                                     # Create a db session
     Base = declarative_base()                                                                                                       # Create a base class for models

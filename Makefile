@@ -5,8 +5,6 @@ runclient:
 runserver:
 	$(MAKE) -C scripts server
 
-# Docker commands
-
 # Compose commands
 compose-up:
 	docker-compose -f ./docker/docker-compose.dev.yaml -p spendaro up -d 

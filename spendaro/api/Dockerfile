@@ -1,22 +1,22 @@
-ARG PY_VERSION=3.11-slim
+ARG PY_VERSION="3.11-slim"
+ARG REQUIREMENTS_FILE_DEV="./requirements/requirements-dev.txt"
+ARG REQUIREMENTS_FILE_PROD="./requirements/requirements-prod.txt"
 
-FROM python:${PY_VERSION} AS base
-
-# Update dependencies and install dependencies to build psycopg2 binary
-RUN apt-get update \
-    && apt-get install -y libpq-dev gcc
-
+# Development image
+FROM python:${PY_VERSION} AS dev
+RUN apt-get update
 WORKDIR /usr/api
-
-COPY ./requirements.txt .
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
-RUN apt-get install libpq-dev
+COPY ${REQUIREMENTS_FILE_DEV} .
+RUN pip install --no-cache-dir --upgrade -r ${REQUIREMENTS_FILE_DEV}
 COPY ./ ./
-
-FROM base AS dev
-WORKDIR /usr/api
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 
-FROM base AS prod
+# Production image
+FROM python:${PY_VERSION} AS prod
+RUN apt-get update \
+    && apt-get install -y libpq-dev gcc
 WORKDIR /usr/api
+COPY ${REQUIREMENTS_FILE_PROD} .
+RUN pip install --no-cache-dir --upgrade -r ${REQUIREMENTS_FILE_PROD}
+COPY ./ ./
 CMD ["uvicorn", "server:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "8000"]

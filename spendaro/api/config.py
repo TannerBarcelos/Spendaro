@@ -1,6 +1,6 @@
 import os
 
-# Database configurations
+# Database configurations - uses environment variables if set, otherwise uses defaults (for local development outside of docker)
 POSTGRES_USER = os.environ.get('POSTGRES_USER', 'postgres')
 POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', 'postgres')
 POSTGRES_HOST = os.environ.get('POSTGRES_HOST', 'localhost')

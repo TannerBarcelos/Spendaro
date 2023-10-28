@@ -22,8 +22,8 @@ image-dev:
 	docker build -t ${API_IMAGE_NAME} --target ${TARGET_STAGE_DEV} ./api
 
 container-dev:
-	docker run --name ${CLIENT_CONTAINER_NAME} -v $(PWD)/client:/usr/app -v /usr/app/node_modules -dp ${CLIENT_HOST_PORT}:5173 ${CLIENT_IMAGE_NAME}
-	docker run --name ${API_CONTAINER_NAME} -v $(PWD)/api:/usr/api -dp ${API_HOST_PORT}:8000 ${API_IMAGE_NAME}
+	docker run --name ${CLIENT_CONTAINER_NAME} -v $(PWD)/spendaro/client:/usr/app -v /usr/app/node_modules -dp ${CLIENT_HOST_PORT}:5173 ${CLIENT_IMAGE_NAME}
+	docker run --name ${API_CONTAINER_NAME} -v $(PWD)/spendaro/api:/usr/api -dp ${API_HOST_PORT}:8000 ${API_IMAGE_NAME}
 	docker run --name ${DB_CONTAINER_NAME} -e POSTGRES_PASSWORD=postgres -dp ${DB_HOST_PORT}:5432 ${DB_IMAGE_NAME}
 
 

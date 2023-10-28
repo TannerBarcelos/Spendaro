@@ -2,6 +2,6 @@
 
 cd ../spendaro
 
-cd api && pip install -r requirements.txt
+cd api && pip install -r ./requirements/requirements-dev.txt
 cd ..
 cd client && npm install --verbose

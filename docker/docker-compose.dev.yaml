@@ -28,8 +28,9 @@ services:
       - /usr/app/node_modules
     environment:
       - VITE_PROXY_URL=http://api:8000
+      - VITE_PORT=5173
     ports:
-      - '5173:5173'
+      - '5173:5173' # should match VITE_PORT (override in .env if needed)
   postgres:
     image: postgres:15.4-alpine
     environment:

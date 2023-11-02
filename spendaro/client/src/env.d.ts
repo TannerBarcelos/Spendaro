@@ -2,8 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_PROXY_URL: string
-  readonly VITE_PROXY_PORT: number
-  // more env variables...
+  readonly VITE_PORT: number
 }
 
 interface ImportMeta {

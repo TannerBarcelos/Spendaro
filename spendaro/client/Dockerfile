@@ -1,12 +1,11 @@
 ARG NODE_VERSION_TAG=20.5.1-slim
 ARG EXPOSE_PORT=5173
-ARG NODE_ENV=development
 
 ###############
 # Development #
 ###############
 FROM node:${NODE_VERSION_TAG} AS dev
-ENV NODE_ENV=${NODE_ENV}
+ENV NODE_ENV=development
 WORKDIR /usr/app
 COPY package*.json ./
 RUN npm install

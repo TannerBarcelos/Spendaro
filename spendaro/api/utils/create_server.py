@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-class FastApiServerCreator:
+class FastApiServerFactory:
     def __init__(self):
         self.__app__ = FastAPI()
 

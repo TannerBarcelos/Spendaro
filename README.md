@@ -19,31 +19,29 @@ Spendaro is a personal finance application that helps you track your spending an
   - Redux Toolkit
   - Vitest
   - Cypress for E2E testing
-  - Much more!
 
 - **Backend**
 
   - FastAPI
-  - SQLAlchemy
-  - Pytest
+  - SQLAlchemy for ORM
+  - Pytest for testing
 
-- **Database**
+- **Databases**
 
-  - MySQL
-  - Redis
+  - Postgres for main database
+  - Redis for caching
 
 - **Infrastructure**
 
-  - Docker
-  - Kubernetes
-  - AWS
+  - Docker for containerization
+  - Kubernetes for container orchestration
+  - AWS for hosting
   - Jenkins for CI/CD Pipelines of app
   - Github Actions for Marketing Site Deployment
 
 - **Project Management**
   - Figma for design
-  - Trello for project management
-  - Much more!
+  - Github Projects for project management
 
 ## Features
 

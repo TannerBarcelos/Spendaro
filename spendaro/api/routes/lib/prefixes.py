@@ -2,7 +2,7 @@ from enum import Enum
 
 # Prefixes for routes i.e /users, /budgets, etc.
 class RoutePrefixes(Enum):
-    root = '/root'
+    dummy = '/dummy'
     users = '/users'
     budgets = '/budgets'
     transactions = '/transactions'

@@ -1,11 +1,11 @@
-from utils.create_server import FastApiServerFactory
-from routes.main import router
+from utils.server_factory import FastApiServerFactory
+from routes.router import root_router as router
 
-# Instantiate a new server creator
-instance = FastApiServerFactory()
+# Instantiate a new server using the FastApiServerFactory class
+fast_api_instance = FastApiServerFactory()
 
-# Create a FastAPI App
-app = instance.get_app()
+# Get the app from the instance
+app = fast_api_instance.get_app()
 
-# Link up routers (all routes are prefixed via /api)
+# Include the router from routes.main
 app.include_router(router, prefix='/api')

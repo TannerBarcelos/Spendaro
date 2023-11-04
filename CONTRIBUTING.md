@@ -15,6 +15,13 @@ POSTGRES_HOST=<replace_me>
 
 These variables are used to spin up the Postgres Database. You can use any values you want for these variables but ensure they are secure.
 
+2. Set your python path to the root of the project
+
+```bash
+cd spendaro/api
+export PYTHONPATH=${PYTHONPATH}:$(pwd)
+```
+
 2. Run with pre-set Makefile docker compose command
 
 ```bash

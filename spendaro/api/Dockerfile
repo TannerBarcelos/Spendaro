@@ -7,7 +7,7 @@ WORKDIR /usr/api
 COPY ./requirements ./requirements
 RUN pip install --no-cache-dir --upgrade -r ./requirements/requirements-dev.txt
 COPY ./ ./
-CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["python", "server.py"]
 
 # Production image
 FROM python:${PY_VERSION} AS prod
@@ -17,4 +17,4 @@ WORKDIR /usr/api
 COPY ./requirements ./requirements
 RUN pip install --no-cache-dir --upgrade -r ./requirements/requirements-prod.txt
 COPY ./ ./
-CMD ["uvicorn", "server:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "server.py"]

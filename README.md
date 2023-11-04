@@ -2,53 +2,53 @@
 
 ![Marketing Site Deployment](https://github.com/TannerBarcelos/Spendaro/actions/workflows/deploy-site.yaml/badge.svg)
 
-Helping make finance easier for couples.
+**Helping make finance easier for everyone**
 
 ![Spendaro](./spendaro.png)
 
 ## About The Project
 
-Spendaro is a budgeting app that is designed to help couples manage their finances together. As a newlywed, I know just how hard it is to manage finances with your significant other. This app is designed to help make that process easier. Finance and budgeting are a passion of mine and I hope to help others with this app.
+Spendaro is a personal finance application that helps you track your spending and budgeting. It is built with a modern tech stack and is designed to be easy to use. It is currently under development and is not ready for production use and a feature list is still being developed.
 
 ### Built With
 
-* **Frontend**
-    * Typescript
-    * React
-    * TanStack Query
-    * React Router
-    * React Hook Form
-    * Shadcn
-    * Redux Toolkit
-    * Vitest
-    * Cypress for E2E testing
-    * Much more!
+- **Frontend**
 
-* **Backend**
-    * Python
-    * FastAPI
-    * SQLAlchemy
-    * Pytest
+  - React (with Typescript)
+  - Shadcn
+  - Redux Toolkit
+  - Vitest
+  - Cypress for E2E testing
+  - Much more!
 
-* **Database**
-    * PostgreSQL
-    * Redis
- 
-* **Infrastructure**
-    * Docker
-    * Kubernetes
-    * AWS
-    * Github Actions
+- **Backend**
 
-* **Project Management**
-    * Figma for design
-    * Trello for project management
-    * Much more!
+  - FastAPI
+  - SQLAlchemy
+  - Pytest
 
+- **Database**
+
+  - MySQL
+  - Redis
+
+- **Infrastructure**
+
+  - Docker
+  - Kubernetes
+  - AWS
+  - Jenkins for CI/CD Pipelines of app
+  - Github Actions for Marketing Site Deployment
+
+- **Project Management**
+  - Figma for design
+  - Trello for project management
+  - Much more!
 
 ## Features
 
 Under development
 
 ## Getting Started
+
 Please refer to the [contributing guide](./CONTRIBUTING.md) for information on how to get started with the project and how to contribute.

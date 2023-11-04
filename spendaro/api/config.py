@@ -1,8 +1,10 @@
 import os
 
 DEBUG=os.environ.get('DEBUG', True)
+API_PORT = os.environ.get('API_PORT', 8000)
+API_DOCS_URL = os.environ.get('API_DOCS_URL', '/docs')
 
-# Database configurations - uses environment variables if set, otherwise uses defaults (for local development outside of docker)
+# Database configurations set as environment variables at the Docker level (see docker-compose.dev.yml)
 POSTGRES_USER = os.environ.get('POSTGRES_USER', 'postgres')
 POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD', 'postgres')
 POSTGRES_HOST = os.environ.get('POSTGRES_HOST', 'localhost')

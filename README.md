@@ -15,10 +15,12 @@ Spendaro is a personal finance application that helps you track your spending an
 - **Frontend**
 
   - React (with Typescript)
-  - Shadcn
+  - Tailwind CSS
+  - React Query
+  - React Router
   - Redux Toolkit
   - Vitest
-  - Cypress for E2E testing
+  - Cypress
 
 - **Backend**
 

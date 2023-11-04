@@ -1,5 +1,6 @@
 import os
 
+# FastAPI configurations
 DEBUG=os.environ.get('DEBUG', True)
 API_PORT = os.environ.get('API_PORT', 8000)
 API_DOCS_URL = os.environ.get('API_DOCS_URL', '/docs')

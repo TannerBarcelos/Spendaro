@@ -30,5 +30,4 @@ class PGDatabaseConnector():
         
     def get_connection(self) -> Connection:
         connection = self.__connect__()
-        print(self.SQLALCHEMY_DATABASE_URL)
         return connection

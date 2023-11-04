@@ -9,3 +9,7 @@ app = fast_api_instance.get_app()
 
 # Include the router from routes.main
 app.include_router(router, prefix='/api')
+
+# Run the server
+if __name__ == '__main__':
+    fast_api_instance.run_server('server:app')

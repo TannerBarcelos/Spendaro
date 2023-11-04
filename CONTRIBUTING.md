@@ -2,7 +2,7 @@
 
 The quickest way to get started is to use Docker Compose. This will build the images and create the containers for you. You will need to have [Docker](https://www.docker.com/) installed on your machine to proceed with this method.
 
-### Running the app
+### Running the app with Docker Compose (Recommended)
 
 1. Create a `.env` file in the `docker` directory and add the following variables:
 
@@ -31,13 +31,10 @@ export PYTHONPATH=${PYTHONPATH}:$(pwd)
 Make compose-up
 ```
 
-#### Local
+3. Navigate to `http://localhost:5173/` in your browser to view the app. You can also ping the server using a tool like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/) at `http://localhost:8000/api/<some_route>`.
 
-- This will run the react app and the rest api as standalone services **outside of Docker**
-- You will need to have [Node](https://nodejs.org/en/) installed on your machine to proceed with the local route as well as Python3
+### Running the app without Docker Compose
 
-```bash
-Make install-local-deps # Install dependencies for the client and server
-Make runclient
-Make runserver
-```
+_Note: This method is not recommended as it is more complicated and requires you to have Postgres installed on your machine + other configurations that are not required when using Docker Compose._
+
+**WIP**

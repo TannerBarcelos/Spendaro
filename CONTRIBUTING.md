@@ -14,7 +14,9 @@ POSTGRES_HOST=<replace_me>
 POSTGRES_PORT=<replace_me>
 ```
 
-These variables are used to spin up the Postgres Database. You can use any values you want for these variables but ensure they are secure.
+> These variables are used to spin up the Postgres Database. You can use any values you want for these variables but ensure they are secure.
+>
+> **Note that if you do not do this step, the application still runs but will be using insecure default values of the above variables where the name of the database is `postgres`, the username is `postgres` and the password is `postgres` and the host is `localhost` and the port is `5432`. _(see `config.py`)_**
 
 2. Set your python path to the root of the project
 

@@ -11,6 +11,7 @@ POSTGRES_USER=<replace_me>
 POSTGRES_PASSWORD=<replace_me>
 POSTGRES_DB=<replace_me>
 POSTGRES_HOST=<replace_me>
+POSTGRES_PORT=<replace_me>
 ```
 
 These variables are used to spin up the Postgres Database. You can use any values you want for these variables but ensure they are secure.

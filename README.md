@@ -29,16 +29,15 @@ Spendaro is a personal finance application that helps you track your spending an
 
 - **Databases**
 
-  - MySQL
+  - MySQL on Planetscale
   - DrizzleORM
-  - Redis for caching
+  - Redis on Upstash
 
 - **Infrastructure**
 
   - Docker for containerization
   - Kubernetes for container orchestration on EKS
-  - Jenkins for CI/CD Pipeline
-  - Github Actions for Marketing Site Deployment
+  - Github Actions for CI/CD pipelines of each service in the monorepo
 
 - **Project Management**
   - Figma for design

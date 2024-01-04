@@ -12,7 +12,7 @@ Spendaro is a personal finance application that helps you track your spending an
 
 ### Tech Stack
 
-- **Frontend**
+- #### Frontend
 
   - React (with Typescript)
   - Tailwind / Radix
@@ -20,7 +20,7 @@ Spendaro is a personal finance application that helps you track your spending an
   - Vitest for unit testing
   - Cypress for E2E tests
 
-- **Backend**
+- #### Backend
 
   - Express
   - MySQL on Planetscale
@@ -28,14 +28,14 @@ Spendaro is a personal finance application that helps you track your spending an
   - Redis on Upstash
   - Jest for Unit and Integration Testing
 
-- **Infrastructure**
+- #### Infrastructure
 
-  - Docker for containerization / compose for production _(Kubernetes is overkill for this project usecase right now)_
-  - Ansible for deployment automation and configuration
-  - Terraform for Linode VM provisioning automation 
-  - Github Actions for CI/CD pipelines of each service in the monorepo
+  - **Docker / Docker Compose**
+  - **Ansible** for deployment automation
+  - **Terraform** for infrastructure VM provisioning
+  - **Github Actions** for CI/CD pipelines of each service in the monorepo
 
-- **Project Management**
+- #### Project Management
   - Figma for design
   - Github Projects for project management
 

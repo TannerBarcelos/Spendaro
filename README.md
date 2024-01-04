@@ -10,28 +10,23 @@
 
 Spendaro is a personal finance application that helps you track your spending and budgeting. It is built with a modern tech stack and is designed to be easy to use. It is currently under development and is not ready for production use and a feature list is still being developed.
 
-### Built With
+### Tech Stack
 
 - **Frontend**
 
-  - React (with Typescript)
-  - Tailwind CSS / RadixUI
-  - Tanstack Query
-  - React Router
-  - Zustand
-  - Vitest
-  - Cypress
+  - NextJS (with Typescript)
+  - Tailwind / Radix
+  - Zustand for Client Side state management
+  - Vitest for unit testing
+  - Cypress for E2E tests
 
 - **Backend**
 
   - Express
-  - JWT
-
-- **Databases**
-
   - MySQL on Planetscale
   - DrizzleORM
   - Redis on Upstash
+  - Jest for Unit and Integration Testing
 
 - **Infrastructure**
 

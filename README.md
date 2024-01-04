@@ -14,7 +14,7 @@ Spendaro is a personal finance application that helps you track your spending an
 
 - **Frontend**
 
-  - NextJS (with Typescript)
+  - React (with Typescript)
   - Tailwind / Radix
   - Zustand for Client Side state management
   - Vitest for unit testing

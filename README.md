@@ -15,30 +15,29 @@ Spendaro is a personal finance application that helps you track your spending an
 - **Frontend**
 
   - React (with Typescript)
-  - Tailwind CSS
-  - React Query
+  - Tailwind CSS / RadixUI
+  - Tanstack Query
   - React Router
-  - Redux Toolkit
+  - Zustand
   - Vitest
   - Cypress
 
 - **Backend**
 
-  - FastAPI
-  - SQLAlchemy for ORM
-  - Pytest for testing
+  - Express
+  - JWT
 
 - **Databases**
 
-  - Postgres for main database
+  - MySQL
+  - DrizzleORM
   - Redis for caching
 
 - **Infrastructure**
 
   - Docker for containerization
-  - Kubernetes for container orchestration
-  - AWS for hosting
-  - Jenkins for CI/CD Pipelines of app
+  - Kubernetes for container orchestration on EKS
+  - Jenkins for CI/CD Pipeline
   - Github Actions for Marketing Site Deployment
 
 - **Project Management**

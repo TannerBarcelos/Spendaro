@@ -30,8 +30,9 @@ Spendaro is a personal finance application that helps you track your spending an
 
 - **Infrastructure**
 
-  - Docker for containerization
-  - Kubernetes for container orchestration on EKS
+  - Docker for containerization / compose for production _(Kubernetes is overkill for this project usecase right now)_
+  - Ansible for deployment automation and configuration
+  - Terraform for Linode VM provisioning automation 
   - Github Actions for CI/CD pipelines of each service in the monorepo
 
 - **Project Management**

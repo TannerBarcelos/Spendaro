@@ -8,7 +8,7 @@ Spendaro is a powerful finance app designed to empower families and individuals 
 
 ## Project Repositories
 
-> The Spendaro project is divided into three repositories. Each repository is responsible for a different part of the project. The repositories are:
+> The Spendaro project is divided into multiple repositories which make up a microservices architecture. Each repository is responsible for a different part of the project. The repositories are:
 
 - [Spendaro Web UI](https://github.com/TannerBarcelos/Spendaro-Web)
 - [Spendaro API](https://github.com/TannerBarcelos/Spendaro-API)
